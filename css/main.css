@@ -286,12 +286,13 @@ textarea {
 
 body{
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 24px;
     color: #fff;
+    font-weight: 400;
 }
 h1, h2, h3, h4, h5, h6{
-
+    margin-top: 10px;
     font-family: 'Roboto', sans-serif;
 }
 .btn{
@@ -347,6 +348,7 @@ h1, h2, h3, h4, h5, h6{
     background-color: #EE5050;
     padding-top: 75px;
     padding-bottom: 90px;
+    height: 100vh;
 }
 .hero-text-box h1{
     color: #fff;
@@ -374,4 +376,47 @@ h1, h2, h3, h4, h5, h6{
 .download-section{
     text-align: center;
     background-color: #EF5F5F;
+}
+.feature-section{
+    background-color: #EE5050;
+}
+.feature-section .img-block-left{
+    margin-top: 15px;
+}
+.feature-section .all-features{
+    margin-top: 65px;
+}
+.single-feature{
+    margin-bottom: 70px;
+}
+.single-feature i{
+    font-size: 30px;
+    margin-bottom: 10px;    
+}
+.promo-section{
+    background: url("../img/promo-back.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.big-text{
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+.share-section{
+    padding: 110px 0px;
+    background-color: #EE5050;
+}
+ul.social-links li{
+    padding: 0 15px;
+}
+ul.social-links li a{
+    color: #24262B;
+    background-color: rgba(255,255,255, 0.8);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    font-size: 24px;
 }
