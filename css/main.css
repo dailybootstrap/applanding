@@ -1,28 +1,8 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
 }
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -33,11 +13,6 @@ html {
     background: #b3d4fc;
     text-shadow: none;
 }
-
-/*
- * A better looking default horizontal rule
- */
-
 hr {
     display: block;
     height: 1px;
@@ -47,12 +22,6 @@ hr {
     padding: 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
 audio,
 canvas,
 iframe,
@@ -61,108 +30,14 @@ svg,
 video {
     vertical-align: middle;
 }
-
-/*
- * Remove default fieldset styles.
- */
-
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
 textarea {
     resize: vertical;
 }
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
 /*
  * Clearfix: contain floats
  *
@@ -201,7 +76,6 @@ textarea {
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -281,9 +155,6 @@ textarea {
     }
 }
 
-
-
-
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
@@ -301,6 +172,10 @@ h1, h2, h3, h4, h5, h6{
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
     color: #fff;
+    transition: all 0.25s cubic-bezier(0.625,0.125,0.305,0.875);
+}
+.uppercase{
+    text-transform: uppercase;
 }
 .btn i{
     margin-right: 5px;
@@ -309,11 +184,20 @@ h1, h2, h3, h4, h5, h6{
     background: transparent;
     border: 2px solid rgba(255,255,255,0.6);
 }
+.border-btn:hover {
+    background-color: #fff;
+}
 .primary-btn{
     background: #24262B;
     border: 2px solid #24262B;
     box-shadow: 0 9px 16px 0 rgba(36, 38, 43, 0.15);
 }
+.primary-btn:hover{
+    background: #2C2D33;
+    border: 2px solid #2C2D33;
+    color: #fff;
+}
+
 .section{
     padding-top: 120px;
     padding-bottom: 120px;
@@ -339,7 +223,7 @@ h1, h2, h3, h4, h5, h6{
 .main-menu .navbar-brand{
     color: #fff;
     padding: 32.5px 15px;
-    font-size: 24px;
+    font-size: 22px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
@@ -361,7 +245,7 @@ h1, h2, h3, h4, h5, h6{
     padding-bottom: 20px ;
 }
 .main-menu.affix .navbar-brand {
-    padding: 20px 20px;
+    padding: 20px 0 20px 15px;
     font-size: 20px;
 }
 
@@ -371,12 +255,18 @@ h1, h2, h3, h4, h5, h6{
     padding-top: 75px;
     padding-bottom: 90px;
     height: 100vh;
+    min-height: 750px;
+}
+.hero-text-box p{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
 }
 .hero-text-box h1{
     color: #fff;
     font-size: 64px;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
@@ -384,15 +274,65 @@ h1, h2, h3, h4, h5, h6{
     padding-top: 230px;
     padding-bottom: 150px;
 }
-.btn-row .btn:not(:last-child){
-    margin-right: 25px;
+.btn-row{
+    margin-right: -12.5px;
+    margin-left: -12.5px;
 }
-.home-section .img-block{
+.btn-row .btn{
+    margin-right: 12.5px;
+    margin-left: 12.5px;
+}
+.home-section .img-block {
     text-align: center;
-    padding-top: 120px;
+    padding-top: 90px;
+    max-width: 310px;
+    margin-left: auto;
 }
 .home-section .img-block img{
     margin: 0 auto;
+}
+.mouse-pointer {
+    width: 24px;
+    height: 36px;
+    border: 3px solid rgba(255,255,255,0.7);
+    border-radius: 14px;
+    position: absolute;
+    left: 50%;
+    margin-left: -12px;
+    bottom: 120px;
+}
+.mouse-pointer::after{
+    width: 4px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    content: '';
+    left: 50%;
+    top: 4px;
+    bottom: 0;
+    margin-left: -2px;
+    position: absolute;
+    animation: hippo 1s linear infinite;
+}
+@keyframes hippo {
+    0%
+    {
+        transform: translate(-50%,0px);
+        opacity: 0;
+        margin-left: 0;
+    }
+    80%
+    {
+        transform: translate(-50%,8px);
+        opacity: 1;
+        margin-left: 0;
+    }
+    100%
+    {
+        transform: translate(-50%,15px);
+        opacity: 0;
+        margin-left: 0;
+    }
 }
 
 .download-section{
@@ -413,7 +353,11 @@ h1, h2, h3, h4, h5, h6{
 }
 .single-feature i{
     font-size: 30px;
-    margin-bottom: 10px;    
+    margin-bottom: 20px;
+}
+.single-feature h3{
+    font-size: 30px;
+    margin-bottom: 12px;
 }
 .promo-section{
     background: url("../img/promo-back.jpg");
@@ -447,4 +391,155 @@ ul.social-links li a{
     padding: 50px 0;
     text-align: center;
     font-size: 14px;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .mouse-pointer {
+        position: relative;
+        left: 50%;
+        margin-left: -12px;
+        bottom: auto;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .home-section .img-block {
+        padding-top: 50px;
+    }
+    .hero-text-box {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .home-section{
+        height: auto;
+        min-height: 0;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .home-section .img-block img {
+        max-width: 210px;
+        padding-top: 30px;
+    }
+    .hero-text-box h1 {
+        font-size: 48px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .hero-text-box {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .home-section .img-block {
+        text-align: center;
+        padding-top: 50px;
+        margin: 0 auto;
+    }
+    .feature-section .img-block-left{
+        text-align: center;
+    }
+    .feature-section .img-block-left img{
+        margin: 0 auto;
+    }
+    .single-feature {
+        max-width: 320px;
+        margin: 0 auto 70px;
+        text-align: center;
+    }
+    .hero-text-box h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    .promo-section {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        background-size: cover;
+    }
+    .big-text {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    .section{
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    .feature-section{
+        padding-bottom: 30px;
+    }
+    .main-menu {
+        height: 60px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .main-menu .navbar-nav>li>a {
+        padding-top: 20px ;
+        padding-bottom: 20px ;
+    }
+    .main-menu .navbar-brand {
+        padding: 20px 20px 0 15px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-text-box h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .promo-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        text-align: center;
+    }
+    .btn {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+    .btn-row .btn {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .main-menu .navbar-brand, .main-menu.affix .navbar-brand {
+        color: #fff !important;
+        padding: 20px 15px 0;
+        font-size: 18px;
+    }
+    .main-menu .navbar-nav>li>a {
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
+    }
+
+    .navbar-toggle {
+        margin-top: 14px;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar-collapse.collapse.in {
+        border-color: #24262b;
+        background: #24262b;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .btn-row {
+        margin: 0;
+    }
+    .btn-row .btn{
+        margin-bottom: 15px;
+    }
+    .home-section .img-block {
+        text-align: center;
+        padding-top: 0;
+    }
+    .app-download-buttons a {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .section-title {
+        margin-bottom: 30px;
+    }
+    .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
 }
